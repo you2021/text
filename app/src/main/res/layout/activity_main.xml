@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="@id/ver"
+        app:layout_constraintLeft_toLeftOf="@id/ten"
+        app:layout_constraintBottom_toBottomOf="@id/ho"
+        app:layout_constraintTop_toTopOf="@id/top">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logohome"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 가로 -->
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bannerTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.01"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bannerBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.19"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.28"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.37"/>
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/seventyOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.43"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontalSixty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.62"/>
+
+            <!-- 세로-->
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bannerLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.06"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2"/>
+            
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/thirty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.3"/>
+            
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/forty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.4"/>
+            
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/fifty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/sixty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.6"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/seventy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eighty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.94"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bannerRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97"/>
+
+            <!-- 콘텐츠 -->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_banner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#FFF8B6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/bannerBottom"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <!-- 카테고리 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#E0FBFF"
+                app:layout_constraintLeft_toLeftOf="@id/bannerLeft"
+                app:layout_constraintRight_toRightOf="@id/bannerRight"
+                app:layout_constraintTop_toTopOf="@id/bannerBottom"
+                app:layout_constraintBottom_toBottomOf="@id/horizontal"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+            <!-- 전체 -->
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="vertical"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/all"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/toy"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="전체"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            <!-- 공산품 -->
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/toy"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/toy"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="공산품"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            <!-- 식품 -->
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/food"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/toy"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="식품"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            <!-- 의약품 -->
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/medicine"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/toy"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="의약품"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+            </LinearLayout>
+
+            <!-- 카테고리  -->
+
+            <LinearLayout
+                android:id="@+id/category"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#EFFD5F"
+                app:layout_constraintLeft_toLeftOf="@id/bannerLeft"
+                app:layout_constraintRight_toRightOf="@id/bannerRight"
+                app:layout_constraintTop_toTopOf="@id/horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- 의료기 -->
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="vertical"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/hospital"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/toy"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="의료기기"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <!-- 화장품 -->
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cosmetics"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/toy"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="화장품"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <!-- 자동차 -->
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    >
+
+                    <ImageView
+                        android:id="@+id/car"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/toy"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="자동차"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <!-- 해외제품 -->
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/foreign"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/toy"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_foreign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="해외제품"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/category"
+                android:layout_marginTop="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#FFC1C1"
+                app:layout_constraintTop_toTopOf="@id/line_bottom"
+                app:layout_constraintBottom_toBottomOf="@id/seventyOne"
+                app:layout_constraintRight_toRightOf="@id/right"
+                app:layout_constraintLeft_toLeftOf="@id/left">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="해외제품"
+                    android:textSize="25sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/layouy_look"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@id/tv">
+
+                    <TextView
+                        android:id="@+id/look"
+                        android:layout_width="42dp"
+                        android:layout_height="18dp"
+                        android:text="더보기"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="18dp"
+                        android:layout_toRightOf="@id/look"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/next"
+                        android:paddingLeft="3dp"
+                        android:layout_alignBottom="@id/look"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#F4D885"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
+                    app:layout_constraintRight_toRightOf="@id/right"
+                    app:layout_constraintLeft_toLeftOf="@id/left"
+                    app:layout_constraintTop_toTopOf="@id/seventyOne"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
