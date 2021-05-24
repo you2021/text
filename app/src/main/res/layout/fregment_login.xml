@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323C70">
+
+    <!-- 세로 -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90"/>
+
+    <!-- 가로 -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/loginlogo"
+        app:layout_constraintLeft_toLeftOf="@id/left"
+        app:layout_constraintRight_toRightOf="@id/right"
+        app:layout_constraintBottom_toTopOf="@id/top"
+        app:layout_constraintTop_toBottomOf="@id/h_top"/>
+
+    <ImageView
+        android:id="@+id/apple"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/apple"
+        app:layout_constraintLeft_toLeftOf="@id/loginLeft"
+        app:layout_constraintRight_toRightOf="@id/loginRight"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/appleTop"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/appleTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/facebookTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"/>
+
+    <ImageView
+        android:id="@+id/facebook"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/fecebook"
+        app:layout_constraintLeft_toLeftOf="@id/loginLeft"
+        app:layout_constraintRight_toRightOf="@id/loginRight"
+        app:layout_constraintBottom_toTopOf="@id/apple"
+        app:layout_constraintTop_toBottomOf="@id/facebookTop"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/googleTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"/>
+
+    <ImageView
+        android:id="@+id/google"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/google"
+        app:layout_constraintLeft_toLeftOf="@id/loginLeft"
+        app:layout_constraintRight_toRightOf="@id/loginRight"
+        app:layout_constraintBottom_toTopOf="@id/facebook"
+        app:layout_constraintTop_toBottomOf="@id/googleTop"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/kakaoTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <ImageView
+        android:id="@+id/kakao"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/kakao"
+        app:layout_constraintLeft_toLeftOf="@id/loginLeft"
+        app:layout_constraintRight_toRightOf="@id/loginRight"
+        app:layout_constraintBottom_toTopOf="@id/google"
+        app:layout_constraintTop_toBottomOf="@id/kakaoTop"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/naverTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <ImageView
+        android:id="@+id/naver"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/naver"
+        app:layout_constraintLeft_toLeftOf="@id/loginLeft"
+        app:layout_constraintRight_toRightOf="@id/loginRight"
+        app:layout_constraintBottom_toTopOf="@id/kakao"
+        app:layout_constraintTop_toBottomOf="@id/naverTop"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,6 @@ public class RecyclerListItem {
     String name;
     String imgUrl;
     String company;
-    String day;
     int number;
 
     public RecyclerListItem() {
@@ -14,7 +13,6 @@ public class RecyclerListItem {
         this.name = name;
         this.imgUrl = imgUrl;
         this.company = company;
-        this.day = day;
         this.number = number;
     }
 }

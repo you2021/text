@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/all"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="캐리와 장난감 친구들,키친놀이 세트"
+        android:textSize="8sp"
+        android:lines="2"
+        android:layout_below="@id/img"/>
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_name"
+        android:layout_alignLeft="@id/category_name">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제조사 : "
+            android:textSize="8sp"
+            />
+
+        <TextView
+            android:id="@+id/category_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="위드컴퍼니"
+            android:textSize="8sp"
+            android:layout_toRightOf="@id/tv"/>
+
+
+    </RelativeLayout>
+
+ <RelativeLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/layout1"
+     android:layout_marginTop="3dp">
+
+     <ImageView
+         android:id="@+id/eye"
+         android:layout_width="15dp"
+         android:layout_height="10dp"
+         android:src="@drawable/eye"
+         android:layout_toLeftOf="@id/category_eye"
+         android:layout_alignBottom="@id/category_eye"/>
+
+     <TextView
+         android:id="@+id/category_eye"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="000"
+         android:textSize="9sp"
+         android:gravity="center_vertical"
+         android:layout_alignParentRight="true"
+         android:layout_marginLeft="3dp"/>
+
+ </RelativeLayout>
+
+
+
+</RelativeLayout>

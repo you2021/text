@@ -1,65 +1,83 @@
 package com.example.toy;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-import android.view.View;
+import android.view.MenuItem;
 
-import java.util.ArrayList;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<RecyclerListDetailItem> items = new ArrayList<>();
-    RecyclerListDetailAdapter adapter;
-    RecyclerView recycler;
-
-    ArrayList<RecyclerListItem> listItems = new ArrayList<>();
-    RecyclerListAdapter listAdapter;
-    RecyclerView listRecycler;
+    BottomNavigationView bnv;
+    Fragment[] fragments = new Fragment[4];
+    FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recycler = findViewById(R.id.recycler_banner);
-        adapter = new RecyclerListDetailAdapter(this,items);
-        recycler.setAdapter(adapter);
+        //BottomNavigationView 설정
+        fragmentManager = getSupportFragmentManager();
 
-        listRecycler = findViewById(R.id.list);
-        listAdapter = new RecyclerListAdapter(this, listItems);
-        listRecycler.setAdapter(listAdapter);
+        //home이 기본 선택된 상태 화면에 놓기
+        FragmentTransaction tran = fragmentManager.beginTransaction();
+        fragments[0] = new FragmentHome();
+        tran.add(R.id.container, fragments[0]);
+        tran.commit();
 
-        Data();
-        list();
+        bnv=findViewById(R.id.bnv);
+        bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+                //다른 fragment로 변경
+                FragmentTransaction tran = fragmentManager.beginTransaction();
+                if(fragments[0] != null) tran.hide(fragments[0]);
+                if(fragments[1] != null) tran.hide(fragments[1]);
+                if(fragments[2] != null) tran.hide(fragments[2]);
+                if(fragments[3] != null) tran.hide(fragments[3]);
+
+                switch (item.getItemId()){
+                    case R.id.bnv_home:
+                        tran.show(fragments[0]);
+                        break;
+
+                    case R.id.bnv_search:
+                        if (fragments[1]==null) {
+                            fragments[1] = new FragmentSearch();
+                            tran.add(R.id.container, fragments[1]);
+                        }
+                        tran.show(fragments[1]);
+                        break;
+
+                    case R.id.bnv_star:
+                        if (fragments[2]==null) {
+                            fragments[2] = new FragmentSearch();
+                            tran.add(R.id.container, fragments[2]);
+                        }
+                        tran.show(fragments[2]);
+                        break;
+
+                    case R.id.bnv_setting:
+                        if (fragments[3]==null) {
+                            fragments[3] = new FragmentSetting();
+                            tran.add(R.id.container, fragments[3]);
+                        }
+                        tran.show(fragments[3]);
+                        break;
+                }
+                tran.commit();
+                return true;
+            }
+        });
     }
 
-    void Data(){
 
-        items.add(new RecyclerListDetailItem());
-        items.add(new RecyclerListDetailItem());
-        items.add(new RecyclerListDetailItem());
-        items.add(new RecyclerListDetailItem());
-        items.add(new RecyclerListDetailItem());
-        items.add(new RecyclerListDetailItem());
-        items.add(new RecyclerListDetailItem());
-    }
 
-    void list(){
-        listItems.add(new RecyclerListItem());
-        listItems.add(new RecyclerListItem());
-        listItems.add(new RecyclerListItem());
-        listItems.add(new RecyclerListItem());
-        listItems.add(new RecyclerListItem());
-        listItems.add(new RecyclerListItem());
-        listItems.add(new RecyclerListItem());
-
-    }
-
-    public void clickBanner(View view) {
-    }
 }
