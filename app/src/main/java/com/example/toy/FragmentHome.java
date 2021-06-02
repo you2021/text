@@ -11,17 +11,21 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import java.util.ArrayList;
 
 public class FragmentHome extends Fragment {
 
-    ArrayList<RecyclerBannerItem> bannerItems = new ArrayList<>();
-    RecyclerBannerAdapter bannerAdapter;
-    RecyclerView banner;
-
     ArrayList<RecyclerListItem> listItems = new ArrayList<>();
     RecyclerListAdapter listAdapter;
     RecyclerView list;
+
+    AdView mAdView;
 
     @Nullable
     @Override
@@ -34,15 +38,24 @@ public class FragmentHome extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+       MobileAds.initialize(getActivity(), new OnInitializationCompleteListener() {
+           @Override
+           public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+
+           }
+       });
+
+       mAdView = view.findViewById(R.id.adView);
+       AdRequest adRequest = new AdRequest.Builder().build();
+       mAdView.loadAd(adRequest);
+
         Toolbar toolbar = view.findViewById(R.id.toolbar);
         ((MainActivity)getActivity()).setSupportActionBar(toolbar);
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
-        banner = view.findViewById(R.id.recycler_banner);
-        bannerAdapter = new RecyclerBannerAdapter(getActivity(),bannerItems);
-        banner.setAdapter(bannerAdapter);
 
-        loadData();
+
+
 
         list = view.findViewById(R.id.list);
         listAdapter = new RecyclerListAdapter(getActivity(),listItems);
@@ -51,14 +64,6 @@ public class FragmentHome extends Fragment {
         list();
 
 
-    }
-
-    void loadData(){
-        bannerItems.add(new RecyclerBannerItem(R.drawable.baner_all));
-        bannerItems.add(new RecyclerBannerItem(R.drawable.baner_all));
-        bannerItems.add(new RecyclerBannerItem(R.drawable.baner_all));
-        bannerItems.add(new RecyclerBannerItem(R.drawable.baner_all));
-        bannerItems.add(new RecyclerBannerItem(R.drawable.baner_all));
     }
 
     void list(){
